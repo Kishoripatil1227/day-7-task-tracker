@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">DAY 7 • FULL STACK PROJECT</p>
+        <h1>Task Tracker</h1>
+        <p class="subtitle">Create, manage and track your daily tasks.</p>
+      </div>
+      <div class="count-card">
+        <span id="taskCount">0</span>
+        <small>Total Tasks</small>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 id="formTitle">Add New Task</h2>
+      <form id="taskForm">
+        <input type="hidden" id="taskId">
+        <label>Task Name</label>
+        <input id="name" type="text" placeholder="e.g. Learn Django" required>
+
+        <label>Description</label>
+        <textarea id="description" placeholder="Write a short description..."></textarea>
+
+        <label>Status</label>
+        <select id="status">
+          <option>Pending</option>
+          <option>In Progress</option>
+          <option>Completed</option>
+        </select>
+
+        <div class="actions">
+          <button type="submit" id="saveBtn">Add Task</button>
+          <button type="button" class="secondary hidden" id="cancelBtn">Cancel</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="list-header">
+        <h2>My Tasks</h2>
+        <button class="secondary" id="refreshBtn">Refresh</button>
+      </div>
+      <div id="message"></div>
+      <div id="taskList" class="task-list"></div>
+    </section>
+
+    <footer>Built with HTML, CSS, JavaScript & Django</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
